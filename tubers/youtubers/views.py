@@ -1,6 +1,7 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import get_object_or_404, render
 from .models import Youtuber
 # Create your views here.
+
 
 def youtubers(request):
     tubers = Youtuber.objects.order_by('-created_date')
@@ -16,6 +17,7 @@ def youtubers_detail(request, id):
         'tuber': tuber
     }
     return render(request, 'youtubers/youtuber_detail.html', data)
+
 
 def search(request):
     tubers = Youtuber.objects.order_by('-created_date')
@@ -50,5 +52,7 @@ def search(request):
         'city_search': city_search,
         'camera_type_search': camera_type_search,
         'category_search': category_search
+
+
     }
-    return render(request, 'youtubers/search.html')
+    return render(request, 'youtubers/search.html', data)

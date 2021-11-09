@@ -16,7 +16,9 @@
             {{ slide.subtitle }}
           </p>
           <div>
-            <a href="{% url 'slide.button_link' %}" class="btn btn-accent pl-3 pr-3 text-capitalize font-weight-bold">{{slide.button_text}}</a>
+            <button class="btn btn-accent pl-3 pr-3 text-capitalize font-weight-bold">
+              {{slide.button_text}}
+            </button>
           </div>
         </div>
       </div>
@@ -141,12 +143,8 @@
             <p class="card-text">{{team.role}}</p>
             <a href="#" class="btn btn-accent btn-block">{{team.first_name}}</a>
             <div class="text-center mt-2">
-              {% comment %} <button class="btn btn-accent"> <i class="fab fa-facebook-f fa-lg	"></i> </button>
-              <button class="btn btn-accent"> <i class="fab fa-linkedin-in fa-lg	"></i> </button> {% endcomment %}
-              
-              <a href="{% url 'team.fb_link' %}" class="btn btn-accent"><i class="fab fa-facebook-f fa-lg">{{team.button_name}}</a>
-              <a href="{% url 'team.insta_link' %}" class="btn btn-accent"><i class="fab fa-linkedin-in fa-lg">{{team.button_name}}</i></a>
-              
+              <button class="btn btn-accent"> <i class="fab fa-facebook-f fa-lg	"></i> </button>
+              <button class="btn btn-accent"> <i class="fab fa-linkedin-in fa-lg	"></i> </button>
             </div>
           </div>
         </div>

@@ -16,8 +16,11 @@
             {{ slide.subtitle }}
           </p>
           <div>
-            <button class="btn btn-accent pl-3 pr-3 text-capitalize font-weight-bold">
+            {% comment %} <button class="btn btn-accent pl-3 pr-3 text-capitalize font-weight-bold">
               {{slide.button_text}}
+            </button> {% endcomment %}
+            <button type="button" class="btn btn-accent pl-3 pr-3 text-capitalize font-weight-bold">
+              <a href="{{ slide.button_link }}">{{slide.button_text}}</a>
             </button>
           </div>
         </div>
@@ -141,10 +144,17 @@
           <div class="card-body">
             <h5 class="card-title">{{team.first_name}} {{team.last_name}}</h5>
             <p class="card-text">{{team.role}}</p>
-            <a href="#" class="btn btn-accent btn-block">{{team.first_name}}</a>
+            <a href="{{ team.youtube_link }}" class="btn btn-accent btn-block">{{team.button_name}}</a>
             <div class="text-center mt-2">
-              <button class="btn btn-accent"> <i class="fab fa-facebook-f fa-lg	"></i> </button>
-              <button class="btn btn-accent"> <i class="fab fa-linkedin-in fa-lg	"></i> </button>
+              {% comment %} <button class="btn btn-accent"> <i class="fab fa-facebook-f fa-lg	"></i> </button>
+              <button class="btn btn-accent"> <i class="fab fa-linkedin-in fa-lg	"></i> </button> {% endcomment %}
+              
+              <button type="button" class="btn btn-accent">  
+                <a href="{{ team.fb_link }}"> <i class="fab fa-facebook-f fa-lg" ></i> </a> 
+              </button>
+              <button type="button" class="btn btn-accent">  
+                <a href="{{ team.insta_link }}"> <i class="fab fa-linkedin-in fa-lg" ></i> </a>
+              </button>
             </div>
           </div>
         </div>

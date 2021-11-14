@@ -13,7 +13,7 @@ def contact(request):
         message = request.POST['message']
         user_id = request.POST['user_id']
         
-        contact = Contact(full_name=full_name, phone=phone, email=email, subject=subject, message=message, user_id=user_id)
+        contact = Contact(full_name=full_name, phone=phone, email=email, company_name=company_name, subject=subject, message=message, user_id=user_id)
         contact.save()
         messages.success(request, 'Thanks for reaching out!')
         return redirect('youtubers')

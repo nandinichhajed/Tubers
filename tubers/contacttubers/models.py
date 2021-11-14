@@ -13,4 +13,4 @@ class Contact(models.Model):
     created_date = models.DateTimeField(blank=True, default=datetime.now)
 
     def __str__(self):
-        return self.email
+        return self.company_name

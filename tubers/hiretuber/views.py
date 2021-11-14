@@ -21,4 +21,4 @@ def hiretuber(request):
                               city=city, phone=phone, email=email, state=state, message=message, user_id=user_id)
         hiretuber.save()
         messages.success(request, 'Thanks for reaching out!')
-        return redirect('youtubers')
+        return redirect('home')

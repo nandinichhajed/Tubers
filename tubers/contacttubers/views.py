@@ -16,5 +16,5 @@ def contact(request):
         contact = Contact(full_name=full_name, phone=phone, email=email, company_name=company_name, subject=subject, message=message, user_id=user_id)
         contact.save()
         messages.success(request, 'Thanks for reaching out!')
-        return redirect('youtubers')
+        return redirect('home')
     return render(request, 'webpages/contact.html')

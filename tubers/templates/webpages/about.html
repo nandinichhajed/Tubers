@@ -59,7 +59,11 @@
         <!-- team 1 -->
         {% for team in teams %}
         <div class="card border-0 text-center  ml-3 mr-3">
-          <img src="{{ team.photo.url }}" class="card-img-top" alt="team-member">
+          <div>
+            <a href="{% url 'youtubers_detail' team.id %}">
+              <img src="{{ team.photo.url }}" class="card-img-top" alt="team-member">
+            </a>
+          </div>
           <div class="card-body">
             <h5 class="card-title">{{team.first_name}} {{team.last_name}}</h5>
             <p class="card-text">{{team.role}}</p>

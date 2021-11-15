@@ -28,14 +28,21 @@
             {% else %}
             <input type="hidden" name="user_id" value="00">
             {% endif %}
+
             <div class="form-row">
               <div class="form-group col-lg-6">
-                <input name="full_name" class="form-control" placeholder="Full Name" >
+                {% if user.is_authenticated %}
+                <input name="full_name" value="{{user.first_name}} {{user.last_name}}" class="form-control" placeholder="Full Name">
+                {% else %}
+                <input name="full_name" class="form-control" placeholder="Full Name">
+                {% endif %}
               </div>
+
               <div class="form-group col-lg-6">
                 <input name="phone" class="form-control" placeholder="Phone Number">
               </div>
             </div>
+
             <div class="form-row">
               <div class="form-group col-lg-6">
                 {% if user.is_authenticated %}
@@ -44,6 +51,7 @@
                 <input name="email" type="email" class="form-control" placeholder="Email">
                 {% endif %}
               </div>
+
               <div class="form-group col-lg-6">
                 <input name="company_name" class="form-control" placeholder="Company Name">
               </div>

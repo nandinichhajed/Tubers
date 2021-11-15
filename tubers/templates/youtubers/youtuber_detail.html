@@ -69,11 +69,21 @@
 
           <div class="form-row">
             <div class="form-group col-md-4">
+              {% if user.is_authenticated %}
+              <input name="first_name" value="{{user.first_name}}" class="form-control" placeholder="First Name" required>
+              {% else %}         
               <input name="first_name" class="form-control" placeholder="First Name" required>
+              {% endif %}
             </div>
+            
             <div class="form-group col-md-4">
+              {% if user.is_authenticated %}
+              <input name="last_name" value="{{user.last_name}}" class="form-control" placeholder="Last Name">
+              {% else %}
               <input name="last_name" class="form-control" placeholder="Last Name">
+              {% endif %}
             </div>
+
             <div class="form-group col-md-4">
               {% if user.is_authenticated %}
               <input name="email" type="email" value="{{user.email}}" class="form-control" placeholder="Email">
@@ -82,6 +92,8 @@
               {% endif %}
             </div>
           </div>
+
+
 
           <div class="form-group">
             <select name="tuber_name"  class="form-control">

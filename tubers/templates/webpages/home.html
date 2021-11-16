@@ -54,6 +54,7 @@
 
         <!-- person 1 -->
         {% for fy in featured_youtubers%}
+        {% comment %} featured_youtubers is data in youtubers app views (def home) {% endcomment %}
         <div class="card border-0 text-center ml-3 mr-3">
           <div class="feature-text">
             <a href="{% url 'youtubers_detail' fy.id %}">
@@ -103,6 +104,7 @@
       <div class="tubers grid">
         <!-- person 1 -->
         {% for at in all_tubers%}
+        {% comment %} all_tubers is data in youtubers app views (def home) {% endcomment %}
         <div class="card border-0 text-center">
           <div>
             <a href="{% url 'youtubers_detail' at.id %}">
@@ -142,6 +144,7 @@
 
         <!-- team 1 -->
         {% for team in teams %}
+        {% comment %} teams is data in youtubers app views (def home) {% endcomment %}
         <div class="card border-0 text-center  ml-3 mr-3">
           <div>
             <a href="{% url 'youtubers_detail' team.id %}">

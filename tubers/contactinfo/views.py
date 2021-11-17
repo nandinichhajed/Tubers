@@ -7,7 +7,7 @@ def contactinfo(request):
     data = {
         'contactinfos': contactinfos,
     }
-    return render(request, 'includes/header.html', data)
+    return render(request, 'includes/header.html')
 
 def socallinks(request):
     socallinkss = Socallinks.objects.all()

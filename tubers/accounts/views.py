@@ -3,6 +3,7 @@ from django.contrib.auth import logout
 from django.contrib.auth.models import User
 from django.contrib import messages, auth
 from django.contrib.auth.decorators import login_required
+from hiretuber.models import Hiretuber
 
 # Create your views here.
 
@@ -62,4 +63,8 @@ def logout_user(request):
 
 @login_required(login_url='login')
 def dashboard(request):
-    return render(request, 'accounts/dashboard.html')
+    hiretuber = Hiretuber.objects.all()
+    data = {
+        'hiretuber': hiretuber,
+    }
+    return render(request, 'accounts/dashboard.html', data)

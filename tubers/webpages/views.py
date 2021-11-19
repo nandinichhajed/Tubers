@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Slider, Team
+from .models import Slider, Team, About
 from youtubers.models import Youtuber
 # Create your views here.
 
@@ -19,8 +19,10 @@ def home(request):
 
 def about(request):
     teams = Team.objects.all()
+    abouts = About.objects.all()
     data = {
         'teams': teams,
+        'abouts': about,
     }
     return render(request, 'webpages/about.html', data)
 

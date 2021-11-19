@@ -29,33 +29,17 @@
           </thead>
 
           <tbody>
+            {% for ht in hiretuber %}
             <tr>
-              <th scope="row">1</th>
-              <td>Mark</td>
-              <td>Otto</td>
+              <th scope="row">{{ ht.id }}</th>
+              <td>{{ ht.tuber_name }}</td>
+              <td>{{ht.tuber_city}}</td>
               <td>
-                <div class="btn btn-accent">Go to Page </div>
+                <div class="btn btn-accent">Go to Page</div>
               </td>
             </tr>
+            {% endfor %}
 
-            <tr>
-              <th scope="row">2</th>
-              <td>Jacob</td>
-              <td>Thornton</td>
-              <td>
-                <div class="btn btn-accent">Go to Page </div>
-              </td>
-            </tr>
-
-            <tr>
-              <th scope="row">3</th>
-              <td>Larry</td>
-              <td>the Bird</td>
-              <td>
-                <div class="btn btn-accent">Go to Page </div>
-              </td>
-              
-            </tr>
           </tbody>
         </table>
       </div>

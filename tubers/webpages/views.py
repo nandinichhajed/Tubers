@@ -13,7 +13,6 @@ def home(request):
         'teams': teams,
         'featured_youtubers': featured_youtubers,
         'all_tubers': all_tubers,
-
     }
     return render(request, 'webpages/home.html', data)
 
@@ -22,7 +21,7 @@ def about(request):
     abouts = About.objects.all()
     data = {
         'teams': teams,
-        'abouts': about,
+        'abouts': abouts,
     }
     return render(request, 'webpages/about.html', data)
 

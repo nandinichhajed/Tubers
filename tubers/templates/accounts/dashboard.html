@@ -35,7 +35,16 @@
               <td>{{ ht.tuber_name }}</td>
               <td>{{ht.tuber_city}}</td>
               <td>
-                <div class="btn btn-accent">Go to Page</div>
+                <div class="btn btn-accent">
+                  <a href="{% url 'youtubers_detail' ht.tuber_id %}">Go to Page</a>
+                </div> 
+                
+                {% comment %} <button  class="btn btn-accent" onclick="location. href='{% url 'youtubers_detail' ht.id %}'" type="button">Go to Page</button> {% endcomment %}
+
+                {% comment %} <button type="button" class="btn btn-accent">  
+                  <a href="{% url 'youtubers_detail' ht.id %}">Go to Page</a>
+                </button> {% endcomment %}
+
               </td>
             </tr>
             {% endfor %}

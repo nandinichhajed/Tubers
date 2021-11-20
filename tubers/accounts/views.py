@@ -17,7 +17,7 @@ def login(request):
 
         if user is not None:
             auth.login(request, user)
-            messages.warning(request, 'you are logged in')
+            messages.success(request, 'you are logged in')
             return redirect('dashboard')
         else:
             messages.warning(request, 'invalid credentials')

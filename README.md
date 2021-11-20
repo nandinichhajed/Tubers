@@ -6,6 +6,7 @@ In the sign-up and sign-in section, we are having a lot of control over the Djan
 ## Tech Used
 - Django
 - Python
+- postgresql
 - Html
 - CSS
 - JS

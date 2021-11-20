@@ -3,6 +3,7 @@ A Marketplace for YouTubers that they can come and anybody can higher them at th
 
 In the sign-up and sign-in section, we are having a lot of control over the Django messaging framework and we have registration forms and even the Facebook and Google login we have detailed worked on that so you can go ahead and click on Facebook and they are gonna take your login.
 
+
 ## Tech Used
 - Django
 - Python
@@ -66,6 +67,8 @@ python manage.py runserver
 ( * Running on http://127.0.0.1:8000/)
 
 ## Feedback
+
+Give a ⭐️  if this project helped you!
 
 These samples may be updated from time to time so you might want to get updates
 using `git pull`.  Also if there are bugs, you are welcome to submit

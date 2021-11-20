@@ -19,6 +19,7 @@ def login(request):
             auth.login(request, user)
             messages.success(request, 'you are logged in')
             return redirect('dashboard')
+                     
         else:
             messages.warning(request, 'invalid credentials')
             return redirect('login')
@@ -58,6 +59,7 @@ def register(request):
 
 def logout_user(request):
     logout(request)
+    messages.success(request, 'you are logged out')
     return redirect('home')
 
 

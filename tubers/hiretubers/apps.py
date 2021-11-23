@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class HiretuberConfig(AppConfig):
+class HiretubersConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'hiretuber'
+    name = 'hiretubers'

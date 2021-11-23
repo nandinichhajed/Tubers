@@ -21,7 +21,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('webpages.urls')),
     path('youtubers/', include('youtubers.urls')),
-    path('hiretuber/', include('hiretuber.urls')),
+    # path('hiretuber/', include('hiretuber.urls')),
     path('contacttubers/', include('contacttubers.urls')),
     path('contactinfo/', include('contactinfo.urls')),
     path('accounts/', include('accounts.urls')),

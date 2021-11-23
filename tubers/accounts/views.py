@@ -3,7 +3,7 @@ from django.contrib.auth import logout
 from django.contrib.auth.models import User
 from django.contrib import messages, auth
 from django.contrib.auth.decorators import login_required
-from hiretuber.models import Hiretuber
+from hiretubers.models import Hiretuber
 
 # Create your views here.
 

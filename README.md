@@ -13,6 +13,7 @@ In the sign-up and sign-in section, we are having a lot of control over the Djan
 - JS
 
 ## Run Locally
+- Fork the repository, and clone the repository!
 
 **Clone project**
 

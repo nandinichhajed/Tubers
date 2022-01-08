@@ -1,5 +1,5 @@
 <header class="header ">
-    <div class="container">
+    <div class="container-fluid">
       <div class="row ">
         <div class="col-md-6 header-info">
           {% comment %} this is form context_processors {% endcomment %}
@@ -15,7 +15,7 @@
           <a class="btn btn-accent " href="{% url 'logout' %}">logout</a>
           {% else %}
           <a class="btn btn-accent mr-3" href="{% url 'login' %}">Signin</a>
-          <a class="btn btn-accent " href="{% url 'register' %}">SignUp</a>
+          <a class="btn btn-accent" href="{% url 'register' %}">SignUp</a>
           {% endif %}
           
         </div>

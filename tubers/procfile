@@ -1,0 +1,1 @@
+web: gunicorn TUBERS.wsgi --log-file -

@@ -11,26 +11,21 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 import os
 from pathlib import Path
-import django_heroku
-import dj_database_url
-from decouple import config
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
-from dotenv import load_dotenv, find_dotenv
-
-load_dotenv(find_dotenv())
 
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-w62t609w%ml&)=nh8py(m8$ll+^&osx*e5%&ykp(2k3bd@gr4x'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1','applicationtubers.herokuapp.com']
+ALLOWED_HOSTS = []
 
 LOGIN_REDIRECT_URL = 'dashboard'
 
@@ -61,7 +56,6 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -148,8 +142,6 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'tubers/static')
 ]
 
-STATICFILES_STORAGE = 'whitenoice.storage.CompressedMainfestStaticFilesStorage'
-
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
@@ -177,5 +169,3 @@ SITE_ID = 2
 
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
-
-django_heroku.settings(locals())

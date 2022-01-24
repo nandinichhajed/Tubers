@@ -28,7 +28,5 @@ urlpatterns = [
     path('contacttubers/', include('contacttubers.urls')),
     path('contactinfo/', include('contactinfo.urls')),
     path('accounts/', include('accounts.urls')),
-    path('socialaccounts/', include('allauth.urls')),
-    url(r'^media/(?P<path>.*)$', serve,{'document_root':       settings.MEDIA_ROOT}), 
-    url(r'^static/(?P<path>.*)$', serve,{'document_root': settings.STATIC_ROOT}), 
+    path('socialaccounts/', include('allauth.urls')), 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

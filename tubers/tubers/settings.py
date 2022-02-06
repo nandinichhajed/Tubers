@@ -25,12 +25,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = config('SECRET_KEY')
+SECRET_KEY = 'django-insecure-w62t609w%ml&)=nh8py(m8$ll+^&osx*e5%&ykp(2k3bd@gr4x'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = config('DEBUG',cast=bool)
+DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ["applicationtubers.herokuapp.com", "localhost"]
 
 LOGIN_REDIRECT_URL = 'dashboard'
 
@@ -157,7 +157,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = BASE_DIR / 'static'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'tubers/static')
 ]

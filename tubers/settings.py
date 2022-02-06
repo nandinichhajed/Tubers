@@ -91,31 +91,31 @@ TEMPLATES = [
 WSGI_APPLICATION = 'tubers.wsgi.application'
 
 
-# Database
-# https://docs.djangoproject.com/en/3.2/ref/settings/#databases
-
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'lcotubers',
-#         'USER': 'postgres',
-#         'PASSWORD': 'nandinichhajed',
-#         'HOST': 'localhost',
-#     }
-# }
-
-
+Database
+https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'df9os0988n4lqf',
-        'USER': 'bgddpjktqcksxb',
-        'PASSWORD': '33d8ddad6189f05035e3e50d2034179dff18f29f718eec349318c532c6e2019a',
-        'HOST': 'ec2-3-216-113-109.compute-1.amazonaws.com',
-        'Port': '5432',
+        'NAME': 'lcotubers',
+        'USER': 'postgres',
+        'PASSWORD': 'nandinichhajed',
+        'HOST': 'localhost',
     }
 }
+
+
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'df9os0988n4lqf',
+#         'USER': 'bgddpjktqcksxb',
+#         'PASSWORD': '33d8ddad6189f05035e3e50d2034179dff18f29f718eec349318c532c6e2019a',
+#         'HOST': 'ec2-3-216-113-109.compute-1.amazonaws.com',
+#         'Port': '5432',
+#     }
+# }
 
 
 

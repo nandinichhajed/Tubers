@@ -14,9 +14,8 @@ import os
 from pathlib import Path
 from decouple import config
 import dj_database_url
-# import fcntl
-# from importlib import reload
-# from petshop import parrot as parrot
+import django_heroku
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -31,7 +30,7 @@ SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG',cast=bool)
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['applicationtubers.herokuapp.com']
 
 LOGIN_REDIRECT_URL = 'dashboard'
 
@@ -106,19 +105,19 @@ WSGI_APPLICATION = 'tubers.wsgi.application'
 #     }
 # }
 
-DATABASES = {}
 
-if DEBUG:
-    DATABASES["default"]={
+
+DATABASES = {
+    'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'lcotubers',
-        'USER': 'postgres',
-        'PASSWORD': 'nandinichhajed',
-        # 'HOST': 'localhost',
+        'NAME': 'df9os0988n4lqf',
+        'USER': 'bgddpjktqcksxb',
+        'PASSWORD': '33d8ddad6189f05035e3e50d2034179dff18f29f718eec349318c532c6e2019a',
+        'HOST': 'ec2-3-216-113-109.compute-1.amazonaws.com',
+        'Port': '5432',
     }
-else:
-    DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
-    DATABASES['default'] = dj_database_url.config(default=config('DATABASE_URL'))
+}
+
 
 
 # Password validation
@@ -162,6 +161,9 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'tubers/static')
 ]
+
+django_heroku.settings(locals())
+
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # Default primary key field type

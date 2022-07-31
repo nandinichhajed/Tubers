@@ -27,7 +27,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ["tubersapp.herokuapp.com"]
 # ALLOWED_HOSTS = ["tubersapp.herokuapp.com", "localhost"]
@@ -97,27 +97,27 @@ WSGI_APPLICATION = 'tubers.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'lcotubers',
-        'USER': 'postgres',
-        'PASSWORD': 'nandinichhajed',
-        'HOST': 'localhost',
-    }
-}
-
-
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'd9fce923dtnbj5',
-#         'USER': 'kjsoibzedewhny',
-#         'PASSWORD': 'ef578303ddb3bc1d4a77e94a241db77f1dd4be44e585ed239b22ef6581800076',
-#         'HOST': 'ec2-54-225-234-165.compute-1.amazonaws.com',
-#         'Port': '5432',
+#         'NAME': 'lcotubers',
+#         'USER': 'postgres',
+#         'PASSWORD': 'nandinichhajed',
+#         'HOST': 'localhost',
 #     }
 # }
+
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'd9fce923dtnbj5',
+        'USER': 'kjsoibzedewhny',
+        'PASSWORD': 'ef578303ddb3bc1d4a77e94a241db77f1dd4be44e585ed239b22ef6581800076',
+        'HOST': 'ec2-54-225-234-165.compute-1.amazonaws.com',
+        'Port': '5432',
+    }
+}
 
 # db_from_env = dj_database_url.config(conn_max_age=600)
 # DATABASES['default'].update(db_from_env)

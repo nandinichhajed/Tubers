@@ -164,13 +164,13 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'tubers/static')
 ]
 
-# STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
 
 # MEDIA_URL = '/media/'
 # MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 
 django_heroku.settings(locals())
-
+db_from_env = dj_database_url.config(conn_max_age = 600)
 STATICFILES_STORAGE =  'django.contrib.staticfiles.storage.StaticFilesStorage'
 
 # Default primary key field type

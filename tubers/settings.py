@@ -27,9 +27,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ["applicationtubers.herokuapp.com", "localhost"]
+ALLOWED_HOSTS = ["tubersapp.herokuapp.com", "localhost"]
 
 LOGIN_REDIRECT_URL = 'dashboard'
 
@@ -55,6 +55,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'allauth.socialaccount.providers.google',
     'allauth.socialaccount.providers.facebook',
+    'whitenoise.runserver_nostatic',
     'ckeditor',
 ]
 
@@ -94,29 +95,27 @@ WSGI_APPLICATION = 'tubers.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'lcotubers',
-        'USER': 'postgres',
-        'PASSWORD': 'nandinichhajed',
-        'HOST': 'localhost',
-    }
-}
-
-
-
-
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'df9os0988n4lqf',
-#         'USER': 'bgddpjktqcksxb',
-#         'PASSWORD': '33d8ddad6189f05035e3e50d2034179dff18f29f718eec349318c532c6e2019a',
-#         'HOST': 'ec2-3-216-113-109.compute-1.amazonaws.com',
-#         'Port': '5432',
+#         'NAME': 'lcotubers',
+#         'USER': 'postgres',
+#         'PASSWORD': 'nandinichhajed',
+#         'HOST': 'localhost',
 #     }
 # }
+
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'd9fce923dtnbj5',
+        'USER': 'kjsoibzedewhny',
+        'PASSWORD': 'ef578303ddb3bc1d4a77e94a241db77f1dd4be44e585ed239b22ef6581800076',
+        'HOST': 'ec2-54-225-234-165.compute-1.amazonaws.com',
+        'Port': '5432',
+    }
+}
 
 db_from_env = dj_database_url.config(conn_max_age=600)
 DATABASES['default'].update(db_from_env)
@@ -163,6 +162,7 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'tubers/static')
 ]
 
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR,'media')

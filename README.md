@@ -3,6 +3,8 @@ A Marketplace for YouTubers where they can come and anybody can higher them at t
 
 In the sign-up and sign-in section, we are having a lot of control over the Django messaging framework and we have registration forms and even the Facebook and Google login we have detailed worked on that so you can go ahead and click on Facebook and they are gonna take your login.
 
+Visit the finished application at: https://tubersapp.herokuapp.com/
+
 
 ## Tech Used
 - Django

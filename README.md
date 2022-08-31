@@ -1,12 +1,13 @@
-# Tubers
+# The Tubers
+
 A Marketplace for YouTubers where they can come and anybody can higher them at the conventional pricing and more detail of the services they are offering everything is designed keeping modularity in mind that things a scalable and multiple teams can work on them.
 
 In the sign-up and sign-in section, we are having a lot of control over the Django messaging framework and we have registration forms and even the Facebook and Google login we have detailed worked on that so you can go ahead and click on Facebook and they are gonna take your login.
 
 Visit the finished application at: https://tubersapp.herokuapp.com/
 
-
 ## Tech Used
+
 - Django
 - Python
 - postgresql
@@ -15,6 +16,7 @@ Visit the finished application at: https://tubersapp.herokuapp.com/
 - JS
 
 ## Run Locally
+
 - Fork the repository, and clone the repository!
 
 **Clone project**
@@ -52,11 +54,12 @@ pip install -r requirements.txt
 ```bash
 python manage.py makemigrations
 ```
+
 ```bash
 python manage.py migrate
 ```
 
- **Create super user**
+**Create super user**
 
 ```bash
 python manage.py createsuperuser
@@ -67,14 +70,15 @@ python manage.py createsuperuser
 ```bash
 python manage.py runserver
 ```
-( * Running on http://127.0.0.1:8000/)
+
+( \* Running on http://127.0.0.1:8000/)
 
 ## Feedback
 
-Give a ⭐️  if this project helped you!
+Give a ⭐️ if this project helped you!
 
 These samples may be updated from time to time so you might want to get updates
-using `git pull`.  Also if there are bugs, you are welcome to submit
+using `git pull`. Also if there are bugs, you are welcome to submit
 a Pull Request on github.Either
 Reach out to me on [LinkedIn](https://linkedin.com/in/nandinichhajed).
 

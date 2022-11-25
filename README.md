@@ -10,7 +10,7 @@ Visit the finished application at: https://tubersapp.herokuapp.com/
 
 - Django
 - Python
-- postgresql
+- Postgresql
 - Html
 - CSS
 - JS
